@@ -16,8 +16,7 @@ public class BaseBallTeam {
         this.lose = lose;
         this.draw = draw;
     }
-
-
+    
     public String getName() {
         return name;
     }
@@ -46,16 +45,20 @@ public class BaseBallTeam {
         this.draw = draw;
     }
     
-    public double Rate = getRate(win,lose);
-
-
+    
+    
+        
     public double getRate(int win, int lose) {
-        double Rate = (double)(win/(win + lose));
-        return Rate;
-        }
+        double result = ((double)win/((double)win + (double)lose));
+        return result;
+    }
+    
+    
+    
 
     public void report() {
-        System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分、勝率は" + Rate+ "です。" );
+        double result = getRate(win,lose);
+        System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分、勝率は" + result+ "です。" );
     }
 
 
