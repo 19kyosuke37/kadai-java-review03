@@ -48,7 +48,7 @@ public class BaseBallTeam {
     
     
         
-    public double getRate(int win, int lose) {
+    public double getRate() {
         double result = ((double)win/((double)win + (double)lose));
         return result;
     }
@@ -57,7 +57,7 @@ public class BaseBallTeam {
     
 
     public void report() {
-        double result = getRate(win,lose);
+        double result = getRate();
         System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分、勝率は" + result+ "です。" );
     }
 
